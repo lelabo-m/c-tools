@@ -5,7 +5,7 @@
    Login   <lelabo_m@epitech.net>
    
    Started on  Tue Jun 17 10:26:38 2014 Marc Le Labourier
-   Last update Tue Jun 17 10:28:15 2014 Marc Le Labourier
+   Last update Tue Jun 17 10:45:44 2014 Marc Le Labourier
   
 
 ###############
@@ -17,4 +17,28 @@ A simple c librairie for list creation :
 - A global container
 - Few method too manipulate the container
 - A list's node container
+- completely safe and no leak
 
+###############
+#     opt     #
+###############
+
+A simple lib for argument parsing :
+
+- parse one letter arguments
+- make a list of successive arguments between two option (getopt can't do this)
+- completely safe and no leak
+
+exemple : 
+./opt_parsing -a plop -b this is a test -c success
+
+	  Parsing done :
+	  	  Option [a] :
+		  	 - [plop]
+		  Option [b] :
+		  	 - [this]
+			 - [is]
+		    	 - [a]
+		    	 - [test]
+		  Option [c] :
+		  	 - [success]
