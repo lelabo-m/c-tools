@@ -1,0 +1,20 @@
+  
+   Readme for  in /home/lelabo_m/GITHUB/c-tools
+   
+   Made by Marc Le Labourier
+   Login   <lelabo_m@epitech.net>
+   
+   Started on  Tue Jun 17 10:26:38 2014 Marc Le Labourier
+   Last update Tue Jun 17 10:28:15 2014 Marc Le Labourier
+  
+
+###############
+#   Liblist   #
+###############
+
+A simple c librairie for list creation :
+
+- A global container
+- Few method too manipulate the container
+- A list's node container
+
