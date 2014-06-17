@@ -5,7 +5,7 @@
 ** Login   <lelabo@epitech.net>
 **
 ** Started on  Tue May 13 11:00:21 2014 lelabo_m
-** Last update Tue May 13 15:46:07 2014 lelabo_m
+** Last update Tue Jun 17 10:35:35 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -15,7 +15,7 @@ int	main(int ac, char **av)
 {
   t_list	*opt;
 
-  opt = opt_parse(ac, av, "p");
+  opt = opt_parse(ac, av, "abc");
   opt_verbose();
   if (opt == NULL)
     return (1);

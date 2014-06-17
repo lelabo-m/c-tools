@@ -5,7 +5,7 @@
 ** Login   <lelabo@epitech.net>
 **
 ** Started on  Tue May 13 11:00:21 2014 lelabo_m
-** Last update Tue May 13 15:45:12 2014 lelabo_m
+** Last update Tue Jun 17 10:36:07 2014 Marc Le Labourier
 */
 
 #include <stdio.h>
@@ -35,7 +35,6 @@ void	opt_elemdisplay(t_option *elem)
       printf("- [%s]\n", (char *)(elem->values->_current->contain));
       elem->values->current_next(elem->values);
     }
-  printf("- [%s]\n", (char *)(elem->values->_current->contain));
 }
 
 void	opt_display(t_list *opt)
