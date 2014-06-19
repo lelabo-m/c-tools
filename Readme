@@ -5,7 +5,7 @@
    Login   <lelabo_m@epitech.net>
    
    Started on  Tue Jun 17 10:26:38 2014 Marc Le Labourier
-   Last update Tue Jun 17 10:45:44 2014 Marc Le Labourier
+   Last update Thu Jun 19 11:50:43 2014 Marc Le Labourier
   
 
 ###############
@@ -42,3 +42,9 @@ exemple :
 		    	 - [test]
 		  Option [c] :
 		  	 - [success]
+
+#################
+#  timecounter  #
+#################
+
+A simple C-timer for process timing.
