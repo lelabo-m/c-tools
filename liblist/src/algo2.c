@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Tue Mar 11 13:45:32 2014 Marc Le Labourier
-** Last update Tue Mar 11 17:11:52 2014 Marc Le Labourier
+** Last update Sat Jun 21 10:57:49 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -61,4 +61,22 @@ void		SortList(t_list *list, int (*func)(void *, void *))
   list->_tail = tmp->_tail;
   list->_size = tmp->_size;
   free(tmp);
+}
+
+void		RemoveElem2(t_list *list, int (*func)(void *, void *),
+			    void (*free_func)(void *), void *elem)
+{
+  t_node	*iter;
+  t_node	*save;
+
+  if (!list || list->is_empty(list))
+    return ;
+  iter = list->begin(list);
+  while (iter)
+    {
+      save = iter;
+      iter = iter->next;
+      if ((*func)(save->contain, elem))
+	DestroyNode(save, free_func);
+    }
 }

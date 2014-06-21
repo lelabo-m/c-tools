@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:28:55 2014 Marc Le Labourier
-** Last update Tue Mar 11 16:02:08 2014 Marc Le Labourier
+** Last update Sat Jun 21 10:59:12 2014 Marc Le Labourier
 */
 
 #ifndef LIST_H_
@@ -57,6 +57,8 @@ struct s_list
   t_node	*(*find)(t_list *, int (*)(void *));
   t_node	*(*find2)(t_list *, int (*)(void *, void *), void *);
   void		(*remove)(t_list *, int (*)(void *), void (*)(void *));
+  void		(*remove_if)(t_list *, int (*)(void *, void *),
+			     void (*)(void *), void *);
   void		(*sort)(t_list *, int (*)(void *, void *));
 };
 
@@ -98,6 +100,8 @@ int	CountElem(t_list *, int (*func)(void *));
 t_node	*FindElem(t_list *, int (*func)(void *));
 t_node	*Find2Elem(t_list *, int (*func)(void *, void *), void *);
 void	RemoveElem(t_list *, int (*func)(void *), void (*free_func)(void *));
+void	RemoveElem2(t_list *, int (*func)(void *, void *),
+		    void (*free_func)(void *), void *);
 void	SortList(t_list *, int (*func)(void *, void *));
 
 /*----- Node Function -----*/

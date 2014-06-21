@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:35:48 2014 Marc Le Labourier
-** Last update Tue Mar 11 16:04:49 2014 Marc Le Labourier
+** Last update Sat Jun 21 10:59:42 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -22,6 +22,7 @@ void		InitMethod2(t_list *new)
   new->extract = &ExtractElem;
   new->extract_at = &ExtractAtElem;
   new->sort = &SortList;
+  new->remove_if = &RemoveElem2;
 }
 
 /* Init function's pointer */
