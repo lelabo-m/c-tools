@@ -5,7 +5,7 @@
 ## Login   <maigna_j@epitech.net>
 ##
 ## Started on  sam. mars  08 14:28:57 2014 Jeremy Maignan
-## Last update Tue Mar 11 16:24:51 2014 Marc Le Labourier
+## Last update Mon Jun 23 11:50:00 2014 Marc Le Labourier
 ##
 
 NAME	=	liblist.a
@@ -33,6 +33,8 @@ SRC	=	${DIR_SRC}list.c \
 		${DIR_SRC}extract.c \
 		${DIR_SRC}algo.c \
 		${DIR_SRC}algo2.c \
+		${DIR_SRC}func_parameter.c \
+
 
 OBJ	=	$(SRC:.c=.o)
 

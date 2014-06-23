@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:28:55 2014 Marc Le Labourier
-** Last update Sat Jun 21 10:59:12 2014 Marc Le Labourier
+** Last update Mon Jun 23 11:49:19 2014 Marc Le Labourier
 */
 
 #ifndef LIST_H_
@@ -109,5 +109,8 @@ t_node	*CreateNode(void *);
 void	SwapNode(t_node *, t_node *);
 void	DestroyNode(t_node *, void (*free_func)(void *));
 void	DestroyNodeList(t_node *, void (*free_func)(void *));
+
+/*----- Parameter Function -----*/
+int	address_match(void *, void *);
 
 #endif /* !LIST_H_ */
