@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:51:45 2014 Marc Le Labourier
-** Last update Tue Mar 11 17:12:22 2014 Marc Le Labourier
+** Last update Tue Jun 24 13:35:57 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -49,7 +49,8 @@ void	DestroyNode(t_node *elem, void (*free_elem)(void *))
 {
   if (!elem)
     return ;
-  (*free_elem)(elem->contain);
+  if (free_elem)
+    (*free_elem)(elem->contain);
   if (elem->next)
     elem->next->prev = elem->prev;
   if (elem->prev)
