@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:28:55 2014 Marc Le Labourier
-** Last update Mon Jun 23 11:49:19 2014 Marc Le Labourier
+** Last update Mon Jun 30 09:31:50 2014 Marc Le Labourier
 */
 
 #ifndef LIST_H_
@@ -112,5 +112,6 @@ void	DestroyNodeList(t_node *, void (*free_func)(void *));
 
 /*----- Parameter Function -----*/
 int	address_match(void *, void *);
+void	null_free(void *);
 
 #endif /* !LIST_H_ */

@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 15:36:01 2014 Marc Le Labourier
-** Last update Tue Mar 11 15:31:21 2014 Marc Le Labourier
+** Last update Tue Jul  1 14:02:26 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -24,6 +24,8 @@ t_node	*ExtractElem(t_list *list, t_node *elem)
     elem->prev->next = elem->next;
   elem->next = NULL;
   elem->prev = NULL;
+  if (elem == list->_head)
+    list->_head = NULL;
   return (elem);
 }
 

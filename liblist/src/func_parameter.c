@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Jun 23 11:47:34 2014 Marc Le Labourier
-** Last update Mon Jun 23 11:48:16 2014 Marc Le Labourier
+** Last update Mon Jun 30 09:32:12 2014 Marc Le Labourier
 */
 
 int	address_match(void *first, void *second)
@@ -13,4 +13,9 @@ int	address_match(void *first, void *second)
   if (first == second)
     return (1);
   return (0);
+}
+
+void	null_free(void *elem)
+{
+  (void)elem;
 }
