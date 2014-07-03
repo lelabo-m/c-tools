@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Tue Mar 11 13:45:32 2014 Marc Le Labourier
-** Last update Tue Jul  1 14:01:43 2014 Marc Le Labourier
+** Last update Thu Jul  3 14:08:40 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -77,11 +77,6 @@ void		RemoveElem2(t_list *list, int (*func)(void *, void *),
       save = iter;
       iter = iter->next;
       if ((*func)(save->contain, elem))
-	{
-	  DestroyNode(save, free_func);
-	  list->_size -= 1;
-	  if (save == list->_head)
-	    list->_head = NULL;
-	}
+	DestroyNode(ExtractElem(list, save), free_func);
     }
 }

@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 15:36:01 2014 Marc Le Labourier
-** Last update Tue Jul  1 14:02:26 2014 Marc Le Labourier
+** Last update Thu Jul  3 12:00:30 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -18,14 +18,19 @@ t_node	*ExtractElem(t_list *list, t_node *elem)
   if (!elem)
     return (NULL);
   list->_size -= 1;
+  if (elem == list->_head)
+    (elem->next) ? (list->_head = elem->next) : (list->_head = NULL);
+  if (elem == list->_tail)
+    (elem->prev) ? (list->_tail = elem->prev) : (list->_tail = NULL);
+  if (elem == list->_current)
+    (elem->next) ? (list->_current = elem->next) : (elem->prev)
+      ? (list->_current = elem->prev) : (list->_current = list->_head);
   if (elem->next)
     elem->next->prev = elem->prev;
   if (elem->prev)
     elem->prev->next = elem->next;
   elem->next = NULL;
   elem->prev = NULL;
-  if (elem == list->_head)
-    list->_head = NULL;
   return (elem);
 }
 
