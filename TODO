@@ -4,6 +4,8 @@ string_split
 in_string
 etc
 
+implemente un tupple simple pour les retour de fonctions
+(surcouche de list ??)
 
 liblist:
 Macro pour l'appel des method
