@@ -7,10 +7,10 @@ void		ForEachElem(t_list *list, void (*func)(void *), int order)
 
   if (!list || list->is_empty(list))
     return ;
-  if (!order)
+  if (order == S_NORMAL)
     {
       iter = list->begin(list);
-      while (iter)
+      while (this->_current)
 	{
 	  (*func)(iter->contain);
 	  iter = iter->next;
