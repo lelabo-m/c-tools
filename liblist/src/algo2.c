@@ -53,7 +53,7 @@ void		SortList(t_list *list, int (*func)(void *, void *))
   free(tmp);
 }
 
-void		RemoveElem2(t_list *list, int (*func)(void *, void *),
+void		RemoveElemIf(t_list *list, int (*func)(void *, void *),
 			    void (*free_func)(void *), void *elem)
 {
   t_node	*iter;

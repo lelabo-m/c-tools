@@ -88,7 +88,7 @@ void	ForEachElem(t_list *, void (*func)(void *), int);
 int	CountElem(t_list *, int (*func)(void *, void *), void *);
 t_node	*FindElem(t_list *, int (*func)(void *, void *), void *);
 void	RemoveElem(t_list *, int (*func)(void *), void (*free_func)(void *));
-void	RemoveElem2(t_list *, int (*func)(void *, void *),
+void	RemoveElemIf(t_list *, int (*func)(void *, void *),
 		    void (*free_func)(void *), void *);
 void	SortList(t_list *, int (*func)(void *, void *));
 
