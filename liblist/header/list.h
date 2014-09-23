@@ -43,7 +43,7 @@ struct s_list
   t_node	*(*extract)(t_list *, t_node *);
   t_node	*(*extract_at)(t_list *, unsigned int);
   void		(*foreach)(t_list *, void (*)(void *), int);
-  int		(*count)(t_list *, int (*)(void *));
+  int		(*count)(t_list *, int (*)(void *, void *), void *);
   t_node	*(*find)(t_list *, int (*)(void *, void *), void *);
   void		(*remove)(t_list *, int (*)(void *), void (*)(void *));
   void		(*remove_if)(t_list *, int (*)(void *, void *),
@@ -85,7 +85,7 @@ t_node	*ExtractElem(t_list *, t_node *);
 t_node	*ExtractAtElem(t_list *, unsigned int);
 /* Algorithm */
 void	ForEachElem(t_list *, void (*func)(void *), int);
-int	CountElem(t_list *, int (*func)(void *));
+int	CountElem(t_list *, int (*func)(void *, void *), void *);
 t_node	*FindElem(t_list *, int (*func)(void *, void *), void *);
 void	RemoveElem(t_list *, int (*func)(void *), void (*free_func)(void *));
 void	RemoveElem2(t_list *, int (*func)(void *, void *),

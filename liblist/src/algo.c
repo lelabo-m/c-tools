@@ -27,7 +27,7 @@ void		ForEachElem(t_list *list, void (*func)(void *), int order)
     }
 }
 
-int		CountElem(t_list *list, int (*func)(void *))
+int		CountElem(t_list *list, int (*func)(void *, void *), void *cmp)
 {
   t_node	*iter;
   int		result;
@@ -38,7 +38,7 @@ int		CountElem(t_list *list, int (*func)(void *))
   iter = list->begin(list);
   while (iter)
     {
-      result += (*func)(iter->contain);
+      result += (*func)(iter->contain, cmp);
       iter = iter->next;
     }
   return (result);
