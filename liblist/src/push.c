@@ -1,13 +1,3 @@
-/*
-** push.c for  in /home/lelabo_m/rendu/liblist-c/liblist/src
-**
-** Made by Marc Le Labourier
-** Login   <lelabo_m@epitech.net>
-**
-** Started on  Mon Mar 10 13:52:09 2014 Marc Le Labourier
-** Last update Mon Mar 10 15:02:58 2014 Marc Le Labourier
-*/
-
 #include <stdlib.h>
 #include "list.h"
 

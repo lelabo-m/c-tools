@@ -1,13 +1,3 @@
-/*
-** list.h for  in /home/lelabo_m/rendu/liblist-c/liblist/header
-**
-** Made by Marc Le Labourier
-** Login   <lelabo_m@epitech.net>
-**
-** Started on  Mon Mar 10 13:28:55 2014 Marc Le Labourier
-** Last update Tue Sep 23 13:55:41 2014 Marc Le Labourier
-*/
-
 #ifndef LIST_H_
 # define LIST_H_
 

@@ -1,13 +1,3 @@
-/*
-** iter.c for  in /home/lelabo_m/rendu/liblist-c/liblist
-**
-** Made by Marc Le Labourier
-** Login   <lelabo_m@epitech.net>
-**
-** Started on  Mon Mar 10 15:00:42 2014 Marc Le Labourier
-** Last update Tue Jun 17 10:31:43 2014 Marc Le Labourier
-*/
-
 #include <stdlib.h>
 #include "list.h"
 
