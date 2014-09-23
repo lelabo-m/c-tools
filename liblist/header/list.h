@@ -1,6 +1,9 @@
 #ifndef LIST_H_
 # define LIST_H_
 
+#define S_NORMAL	0 /* normal side */
+#define S_REVERSE	1 /* reverse side */
+
 typedef struct s_node t_node;
 typedef struct s_list t_list;
 
@@ -31,6 +34,7 @@ struct s_list
   t_node	*(*begin)(t_list *);
   t_node	*(*end)(t_list *);
   t_node	*(*current)(t_list *);
+  void		(*current_reset)(t_list *, int);
   void		(*current_next)(t_list *);
   void		(*current_prev)(t_list *);
   void		*(*front)(t_list *);
@@ -71,6 +75,7 @@ t_node	*EndList(t_list *);
 t_node	*CurrentList(t_list *);
 void	IncCurrentList(t_list *);
 void	DecCurrentList(t_list *);
+void	ResetCurrent(t_list *, int);
 /* Access Method */
 void	*GetFront(t_list *);
 void	*GetBack(t_list *);

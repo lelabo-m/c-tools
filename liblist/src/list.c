@@ -11,7 +11,7 @@ void		InitMethod2(t_list *new)
   new->extract = &ExtractElem;
   new->extract_at = &ExtractAtElem;
   new->sort = &SortList;
-  new->remove_if = &RemoveElem2;
+  new->remove_if = &RemoveElemIf;
 }
 
 /* Init function's pointer */
@@ -30,6 +30,7 @@ void		InitMethod1(t_list *new)
   new->current = &CurrentList;
   new->current_next = &IncCurrentList;
   new->current_prev = &DecCurrentList;
+  new->current_reset = &ResetCurrent;
   new->front = &GetFront;
   new->back = &GetBack;
   new->get_current = &GetCurrent;
