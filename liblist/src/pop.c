@@ -18,9 +18,9 @@ t_node	*PopFront(t_list *list)
    {
      list->_tail = NULL;
      list->_current = NULL;
-     elem->next = NULL;
-     elem->prev = NULL;
    }
+ elem->next = NULL;
+ elem->prev = NULL;
  return (elem);
 }
 
@@ -41,8 +41,8 @@ t_node	*PopBack(t_list *list)
    {
      list->_tail = NULL;
      list->_current = NULL;
-      elem->next = NULL;
-      elem->prev = NULL;
    }
+ elem->next = NULL;
+ elem->prev = NULL;
  return (elem);
 }
