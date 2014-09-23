@@ -13,26 +13,16 @@ t_node		*CreateNode(void *elem)
   return (new);
 }
 
+/* Warning : swap only the contain */
 void	SwapNode(t_node *elem1, t_node *elem2)
 {
-  t_node	*save;
+  void	*save;
 
   if (!elem1 || !elem2)
     return ;
-  if (elem1->next)
-    elem1->next->prev = elem2;
-  if (elem2->next)
-    elem2->next->prev = elem1;
-  if (elem1->prev)
-    elem1->prev->next = elem2;
-  if (elem2->prev)
-    elem2->prev->next = elem1;
-  save = elem1->next;
-  elem1->next = elem2->next;
-  elem2->next = save;
-  save = elem1->prev;
-  elem1->prev = elem2->prev;
-  elem2->prev = save;
+  save = elem1->contain;
+  elem1->contain = elem2->contain;
+  elem2->contain = save;
 }
 
 void	DestroyNode(t_node *elem, void (*free_elem)(void *))
