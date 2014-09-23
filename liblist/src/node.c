@@ -13,7 +13,7 @@ t_node		*CreateNode(void *elem)
   return (new);
 }
 
-/* Warning : swap only the contain */
+/* Warning : swap only the contain, not the address. */
 void	SwapNode(t_node *elem1, t_node *elem2)
 {
   void	*save;

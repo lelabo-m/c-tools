@@ -4,6 +4,8 @@
 #define S_NORMAL	0 /* normal side */
 #define S_REVERSE	1 /* reverse side */
 
+#define PTRCAST(x)	((void *)(x))
+
 typedef struct s_node t_node;
 typedef struct s_list t_list;
 
