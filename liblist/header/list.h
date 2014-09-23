@@ -44,7 +44,7 @@ struct s_list
   void		*(*get_current)(t_list *);
   void		*(*insert_value)(t_node *, void *);
   void		*(*insert_atvalue)(t_list *, void *, unsigned int);
-  int		(*insert_elem)(t_list *, t_node *, t_node *);
+  int		(*insert_elem)(t_list *, t_node *, t_node *, int);
   int		(*insert_atelem)(t_list *, t_node *, unsigned int);
   t_node	*(*extract)(t_list *, t_node *);
   t_node	*(*extract_at)(t_list *, unsigned int);
@@ -85,7 +85,9 @@ void	*GetCurrent(t_list *);
 /* Insert Method */
 void	*InsertContain(t_node *, void *);
 void	*InsertAtContain(t_list *, void *, unsigned int);
-int	InsertElem(t_list *, t_node *, t_node *);
+int	InsertElemAfter(t_list *, t_node *, t_node *);
+int	InsertElemBefore(t_list *, t_node *, t_node *);
+int	InsertElem(t_list *, t_node *, t_node *, int);
 int	InsertAtElem(t_list *, t_node *, unsigned int);
 /* Extract Method */
 t_node	*ExtractElem(t_list *, t_node *);

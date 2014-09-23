@@ -10,5 +10,4 @@ implemente un tupple simple pour les retour de fonctions
 liblist:
 Macro pour l'appel des method
 Macro pour le cast des fonction
-Virer les methods inutiles
 Ameliorer les iterations sur list

@@ -5,7 +5,7 @@
 ## Login   <maigna_j@epitech.net>
 ##
 ## Started on  sam. mars  08 14:28:57 2014 Jeremy Maignan
-## Last update Mon Jun 23 11:50:00 2014 Marc Le Labourier
+## Last update Tue Sep 23 19:42:40 2014 Marc Le Labourier
 ##
 
 NAME	=	liblist.a
@@ -28,8 +28,10 @@ SRC	=	${DIR_SRC}list.c \
 		${DIR_SRC}pop.c \
 		${DIR_SRC}size.c \
 		${DIR_SRC}iter.c \
+		${DIR_SRC}iter2.c \
 		${DIR_SRC}access.c \
 		${DIR_SRC}insert.c \
+		${DIR_SRC}insert2.c \
 		${DIR_SRC}extract.c \
 		${DIR_SRC}algo.c \
 		${DIR_SRC}algo2.c \

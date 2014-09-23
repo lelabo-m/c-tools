@@ -39,7 +39,7 @@ void		SortList(t_list *list, int (*func)(void *, void *))
       elem = list->pop_front(list);
       ptr = Find2Last(tmp, func, elem->contain);
       if (ptr)
-	tmp->insert_elem(tmp, ptr, elem);
+	tmp->insert_elem(tmp, ptr, elem, S_NORMAL);
       else
 	{
 	  tmp->push_front(tmp, elem->contain);
