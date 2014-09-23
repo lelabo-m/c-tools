@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:35:48 2014 Marc Le Labourier
-** Last update Sat Jun 21 10:59:42 2014 Marc Le Labourier
+** Last update Tue Sep 23 13:56:35 2014 Marc Le Labourier
 */
 
 #include <stdlib.h>
@@ -17,7 +17,6 @@ void		InitMethod2(t_list *new)
   new->foreach = &ForEachElem;
   new->count = &CountElem;
   new->find = &FindElem;
-  new->find2 = &Find2Elem;
   new->remove = &RemoveElem;
   new->extract = &ExtractElem;
   new->extract_at = &ExtractAtElem;

@@ -55,7 +55,7 @@ int		CountElem(t_list *list, int (*func)(void *))
 }
 
 t_node		*FindElem(t_list *list, int (*func)(void *, void *),
-			   void *cmp)
+			  void *cmp)
 {
   t_node	*iter;
 

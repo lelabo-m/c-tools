@@ -5,7 +5,7 @@
 ** Login   <lelabo_m@epitech.net>
 **
 ** Started on  Mon Mar 10 13:28:55 2014 Marc Le Labourier
-** Last update Mon Jun 30 09:31:50 2014 Marc Le Labourier
+** Last update Tue Sep 23 13:55:41 2014 Marc Le Labourier
 */
 
 #ifndef LIST_H_
@@ -54,8 +54,7 @@ struct s_list
   t_node	*(*extract_at)(t_list *, unsigned int);
   void		(*foreach)(t_list *, void (*)(void *), int);
   int		(*count)(t_list *, int (*)(void *));
-  t_node	*(*find)(t_list *, int (*)(void *));
-  t_node	*(*find2)(t_list *, int (*)(void *, void *), void *);
+  t_node	*(*find)(t_list *, int (*)(void *, void *), void *);
   void		(*remove)(t_list *, int (*)(void *), void (*)(void *));
   void		(*remove_if)(t_list *, int (*)(void *, void *),
 			     void (*)(void *), void *);
@@ -97,8 +96,7 @@ t_node	*ExtractAtElem(t_list *, unsigned int);
 /* Algorithm */
 void	ForEachElem(t_list *, void (*func)(void *), int);
 int	CountElem(t_list *, int (*func)(void *));
-t_node	*FindElem(t_list *, int (*func)(void *));
-t_node	*Find2Elem(t_list *, int (*func)(void *, void *), void *);
+t_node	*FindElem(t_list *, int (*func)(void *, void *), void *);
 void	RemoveElem(t_list *, int (*func)(void *), void (*free_func)(void *));
 void	RemoveElem2(t_list *, int (*func)(void *, void *),
 		    void (*free_func)(void *), void *);
