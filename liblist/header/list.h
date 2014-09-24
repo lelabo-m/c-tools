@@ -47,6 +47,9 @@ struct s_list
   int		(*insert_elem)(t_list *, t_node *, t_node *, int);
   int		(*insert_atelem)(t_list *, t_node *, unsigned int);
   void  (*swap_contains)(t_node *, t_node *);
+  int   (*merge)(t_list *, t_list *);
+  void    *(*list_to_tab)(t_list *, int);
+  int   (*tab_to_list)(t_list *, void *, int);
   t_node	*(*extract)(t_list *, t_node *);
   t_node	*(*extract_at)(t_list *, unsigned int);
   void		(*foreach)(t_list *, void (*)(void *), int);
@@ -93,6 +96,10 @@ int	InsertAtElem(t_list *, t_node *, unsigned int);
 /* Extract Method */
 t_node	*ExtractElem(t_list *, t_node *);
 t_node	*ExtractAtElem(t_list *, unsigned int);
+/* Transform list */
+int   Merge(t_list *, t_list *);
+void  *ListToTab(t_list *list, int);
+int   TabToList(t_list *, void *, int);
 /* Algorithm */
 void  SwapContains(t_node *, t_node *);
 void	ForEachElem(t_list *, void (*func)(void *), int);

@@ -6,6 +6,9 @@ void		InitMethod2(t_list *new)
 {
   new->swap_contains = &SwapContains;
   new->foreach = &ForEachElem;
+  new->list_to_tab = &ListToTab;
+  new->tab_to_list = &TabToList;
+  new->merge = &Merge;
   new->count = &CountElem;
   new->find = &FindElem;
   new->remove = &RemoveElem;

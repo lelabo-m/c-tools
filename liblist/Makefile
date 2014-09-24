@@ -33,6 +33,7 @@ SRC	=	${DIR_SRC}list.c \
 		${DIR_SRC}insert.c \
 		${DIR_SRC}insert2.c \
 		${DIR_SRC}extract.c \
+		${DIR_SRC}transform.c \
 		${DIR_SRC}algo.c \
 		${DIR_SRC}algo2.c \
 		${DIR_SRC}func_parameter.c \
