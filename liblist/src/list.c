@@ -4,6 +4,7 @@
 /* Init function's pointer */
 void		InitMethod2(t_list *new)
 {
+  new->swap_contains = &SwapContains;
   new->foreach = &ForEachElem;
   new->count = &CountElem;
   new->find = &FindElem;
