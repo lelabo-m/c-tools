@@ -70,3 +70,14 @@ void		RemoveElemIf(t_list *list, int (*func)(void *, void *),
 	DestroyNode(ExtractElem(list, save), free_func);
     }
 }
+
+void    SwapContains(t_node *first, t_node *second)
+{
+  void  *tmp;
+
+  if (!first || !second)
+    return ;
+  tmp = first->contain;
+  first->contain = second->contain;
+  second->contain = tmp;
+}
