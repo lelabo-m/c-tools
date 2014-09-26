@@ -74,7 +74,7 @@ void		RemoveElem(t_list *list, int (*func)(void *),
     {
       save = iter;
       iter = iter->next;
-      if ((*func)(save->contain))
+      if (!func || (*func)(save->contain))
 	DestroyNode(ExtractElem(list, save), free_func);
     }
 }
