@@ -27,3 +27,21 @@ void	*GetCurrent(t_list *list)
     return (list->_current->contain);
   return (NULL);
 }
+
+void  *GetAt(t_list *list, int at)
+{
+  t_node  *iter;
+  int     i;
+
+  if (!list || list->is_empty(list))
+    return (NULL);
+
+  iter = list->begin(list);
+  i = 0;
+  while (iter && i < at)
+  {
+    iter = iter->next;
+    ++i;
+  }
+  return ((iter) ? (iter->contain) : (NULL));
+}

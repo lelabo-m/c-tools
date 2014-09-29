@@ -41,6 +41,7 @@ struct s_list
   void		(*current_prev)(t_list *);
   void		*(*front)(t_list *);
   void		*(*back)(t_list *);
+  void    *(*at)(t_list *, int);
   void		*(*get_current)(t_list *);
   void		*(*insert_value)(t_node *, void *);
   void		*(*insert_atvalue)(t_list *, void *, unsigned int);
@@ -52,13 +53,14 @@ struct s_list
   int     (*tab_to_list)(t_list *, void **);
   t_node	*(*extract)(t_list *, t_node *);
   t_node	*(*extract_at)(t_list *, unsigned int);
+  t_list  *(*extract_from_to)(t_list *, unsigned int, unsigned int);
   void		(*foreach)(t_list *, void (*)(void *), int);
   int		(*count)(t_list *, int (*)(void *, void *), void *);
   t_node	*(*find)(t_list *, int (*)(void *, void *), void *);
   void		(*remove)(t_list *, int (*)(void *), void (*)(void *));
   void		(*remove_if)(t_list *, int (*)(void *, void *),
 			     void (*)(void *), void *);
-  void		(*sort)(t_list *, int (*)(void *, void *));
+  void		(*sort)(t_list *list, int (*cmp)(const void *, const void *));
 };
 
 /*----- List Function -----*/
@@ -86,6 +88,7 @@ void	ResetCurrent(t_list *, int);
 void	*GetFront(t_list *);
 void	*GetBack(t_list *);
 void	*GetCurrent(t_list *);
+void  *GetAt(t_list *list, int at);
 /* Insert Method */
 void	*InsertContain(t_node *, void *);
 void	*InsertAtContain(t_list *, void *, unsigned int);
@@ -94,6 +97,7 @@ int	InsertElemBefore(t_list *, t_node *, t_node *);
 int	InsertElem(t_list *, t_node *, t_node *, int);
 int	InsertAtElem(t_list *, t_node *, unsigned int);
 /* Extract Method */
+t_list  *ExtractFromTo(t_list *, unsigned int, unsigned int);
 t_node	*ExtractElem(t_list *, t_node *);
 t_node	*ExtractAtElem(t_list *, unsigned int);
 /* Transform list */
@@ -108,7 +112,7 @@ t_node	*FindElem(t_list *, int (*func)(void *, void *), void *);
 void	RemoveElem(t_list *, int (*func)(void *), void (*free_func)(void *));
 void	RemoveElemIf(t_list *, int (*func)(void *, void *),
 		    void (*free_func)(void *), void *);
-void	SortList(t_list *, int (*func)(void *, void *));
+void	SortList(t_list *list, int (*cmp)(const void *, const void *));
 
 /*----- Node Function -----*/
 t_node	*CreateNode(void *);

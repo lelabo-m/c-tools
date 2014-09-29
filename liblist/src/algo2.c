@@ -25,32 +25,15 @@ t_node		*Find2Last(t_list *list, int (*func)(void *, void *), void *cmp)
   return (NULL);
 }
 
-void		SortList(t_list *list, int (*func)(void *, void *))
+void		SortList(t_list *list, int (*cmp)(const void *, const void *))
 {
-  t_list	*tmp;
-  t_node	*elem;
-  t_node	*ptr;
+  void  **tab;
 
-  if (!list || list->is_empty(list))
-    return ;
-  tmp = CreateList();
-  while (list->is_empty(list) == 0)
-    {
-      elem = list->pop_front(list);
-      ptr = Find2Last(tmp, func, elem->contain);
-      if (ptr)
-	tmp->insert_elem(tmp, ptr, elem, S_NORMAL);
-      else
-	{
-	  tmp->push_front(tmp, elem->contain);
-	  free(elem);
-	}
-    }
-  list->_head = tmp->_head;
-  list->_current = tmp->_head;
-  list->_tail = tmp->_tail;
-  list->_size = tmp->_size;
-  free(tmp);
+  tab = list->list_to_tab(list);
+  qsort(tab, list->len(list), sizeof(void *), cmp);
+  list->remove(list, NULL, NULL);
+  list->tab_to_list(list, tab);
+  free(tab);
 }
 
 void		RemoveElemIf(t_list *list, int (*func)(void *, void *),

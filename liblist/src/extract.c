@@ -42,3 +42,25 @@ t_node	*ExtractAtElem(t_list *list, unsigned int index)
     return (ExtractElem(list, iter));
   return (NULL);
 }
+
+t_list *ExtractFromTo(t_list *list, unsigned int from, unsigned int to)
+{
+  t_list *newList;
+  void   *obj;
+
+  if (!list)
+    return (NULL);
+
+  from    = ((from < list->len(list)) ? (from) : (list->len(list)));
+  to      = ((to < list->len(list))   ? (to)   : (list->len(list)));
+  newList = CreateList();
+
+  while (from < to)
+  {
+    obj = list->at(list, from);
+    if (obj)
+      newList->push_back(newList, list->at(list, from));
+    ++from;
+  }
+  return (newList);
+}

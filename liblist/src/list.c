@@ -14,6 +14,7 @@ void		InitMethod2(t_list *new)
   new->remove = &RemoveElem;
   new->extract = &ExtractElem;
   new->extract_at = &ExtractAtElem;
+  new->extract_from_to = &ExtractFromTo;
   new->sort = &SortList;
   new->remove_if = &RemoveElemIf;
 }
@@ -37,6 +38,7 @@ void		InitMethod1(t_list *new)
   new->current_reset = &ResetCurrent;
   new->front = &GetFront;
   new->back = &GetBack;
+  new->at = &GetAt;
   new->get_current = &GetCurrent;
   new->insert_value = &InsertContain;
   new->insert_atvalue = &InsertAtContain;
